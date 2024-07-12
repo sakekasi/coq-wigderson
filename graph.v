@@ -366,12 +366,6 @@ Proof.
  repeat intro. destruct H,H0. rewrite H,H0. split; auto.
 Qed.
 
-(** **** Exercise: 4 stars, standard (Mremove_elements)  *)
-Lemma Mremove_elements:  forall A i s, 
-  M.In i s -> 
-     eqlistA (@M.eq_key_elt A) (M.elements (M.remove i s)) 
-              (List.filter (fun x => if E.eq_dec (fst x) i then false else true) (M.elements s)).
-
 (* Hints: *)
 Check specialize_SortA_equivlistA_eqlistA.
 Check M.elements_1.
