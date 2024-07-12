@@ -220,12 +220,6 @@ Check S.elements. (* : S.t -> list S.elt *)
 
     Now, this relationship between [S.remove] and [S.elements] will soon be useful: *)
 
-Lemma Sremove_elements:  forall (i: E.t) (s: S.t), 
-  S.In i s -> 
-     S.elements (S.remove i s) = 
-         List.filter (fun x => if E.eq_dec x i then false else true) (S.elements s).
-Abort.  (* Before we prove that, there is some preliminary work to do. *)
-
 (** That is, if [i] is in the set [s], then the elements of [S.remove i s] is the
     list that you get by filtering [i] out of [S.elements s].  Go ahead and prove it! *)
 
