@@ -376,7 +376,7 @@ Check M.eqke_equiv.
 Check M.ltk_strorder.
 Check Proper_eq_key_elt.
 Check filter_InA.
-(* FILL IN HERE *) Admitted.
+(* FILL IN HERE Admitted. *)
 (** [] *)
 
 (** **** Exercise: 3 stars, standard (Mremove_cardinal_less)  *)
